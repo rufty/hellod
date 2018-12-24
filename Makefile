@@ -25,7 +25,7 @@ LFLAGS=-g
 LIBS=-lconfuse
 
 # The other bits.
-DOCS = README License ChangeLog ${APPNAME}.8
+DOCS = README LICENSE ChangeLog ${APPNAME}.8
 # And all the code.
 CODE = Makefile $(wildcard *.h) $(wildcard *.c)
 
