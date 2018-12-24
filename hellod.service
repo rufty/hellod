@@ -1,0 +1,14 @@
+[Unit]
+Description=Example "hello world" service.
+After=syslog.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=forking
+Restart=always
+RestartSec=30
+User=root
+ExecStart=/usr/local/sbin/hellod -D
+
+[Install]
+WantedBy=multi-user.target

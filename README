@@ -1,0 +1,22 @@
+This is a simple, but full, "hello world" example of a service.
+It was written as a starting base for writing real services. Mostly for ham radio on Raspbian,
+but as far as I'm aware there are no particular Raspbian-specific dependencies.
+
+The file "main.c" handles the configuration files and command line options.
+The file "core.c" is the routines for the service. For this example the loop() just prints the date/time.
+"hellod.init.sh" is an old, initscripts, service script. By default, this is unused.
+"hellod.service" is a new, systemd, service file. This is used by default.
+
+To use:
+  make
+  sudo make install
+  sudo service hellod start
+  # Watch the pretty messages in /var/log/syslog
+  sudo service hellod stop
+  sudo make uninstall
+
+TODO
+  Debian package, "make deb"
+  FreeBSD initscript.
+  OpenWRT makefile.
+  Test compatibility with pthreads.

@@ -1,0 +1,31 @@
+.TH HELLOD.CONF "5" "DECEMBER 2018" "hellod.conf 1.0" "File Formats Manual"
+.SH NAME
+hellod.conf \- Example "hello world" service configuration file.
+.SH DESCRIPTION
+Configuration file for the simple "hello world" testbed service.
+.TP
+\fBverbose\fR
+Be more verbose. By default verbose=1 for normal builds, verbose=9 for debug builds.
+.TP
+\fBinterval\fR
+The interval, in seconds, for the loop() to run.
+.TP
+\fBmessage\fR
+Message embedded in output. Grep for this in the logs. Default hellod
+.SH FILES
+Configuration files are loaded in order, /etc/hellod.conf then ~/.hellodrc
+The system-wide configuration file overrides compile-time defaults. The user configuration file overrides
+the system-wide configuration, and finally the command line options override that.
+.SH "SEE ALSO"
+hellod(8)
+.SH "REPORTING BUGS"
+Report bugs to: bugs@wbh.org
+.br
+HelloD home page: <http://wbh.org/code>
+.SH COPYRIGHT
+Copyright \(co 2018 W.B.Hill <mail@wbh.org>
+.br
+License, dual. Either GPLv2 or BSD 2 clause, as appropriate.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.

@@ -1,0 +1,6 @@
+0.1      Inital collection of relevant code from various previous projects.
+0.2      First version to compile cleanly, getopt and confuse only.
+0.3      Added backgrounding back in.
+0.3      Manpages and initscripts.
+0.4      Makefile tweaks for FreeBSD.
+1.0      Public release.

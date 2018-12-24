@@ -1,0 +1,48 @@
+.TH HELLOD "1" "DECEMBER 2018" "hellod 1.0" "System Manager's Manual"
+.SH NAME
+hellod \- Example "hello world" service.
+.SH SYNOPSIS
+.B hellod
+[\fIOPTION\fR] ...
+.SH DESCRIPTION
+Simple "hello world" testbed service that executes a loop() at regular intervals.
+.SH OPTIONS
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Display the help text and exit.
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+Display version message and exit.
+.TP
+\fB\-D\fR
+Detach from the terminal and run in the background.
+.TP
+\fB\-q\fR, \fB\-\-quiet\fR
+No messages, same as \-\-verbose=0
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Be more verbose. By default \-\-verbose=1 for normal builds, \-\-verbose=9 for debug builds.
+.TP
+\fB\-i\fR, \fB\-\-interval\fR
+The interval, in seconds, for the loop() to run.
+.TP
+\fB\-m\fR, \fB\-\-message\fR
+Message embedded in output. Grep for this in the logs. Default hellod 
+.SH FILES
+Configuration files are loaded in order, /etc/hellod.conf then ~/.hellodrc
+The system-wide configuration file overrides compile-time defaults. The user configuration file overrides
+the system-wide configuration, and finally the command line options override that.
+.SH NOTES
+Tested on Debian 9.6, OSX 10.13.6, FreeBSD 12 and Raspbian 9.5
+InitScripts only tested on Linux.
+.SH "REPORTING BUGS"
+Report bugs to: bugs@wbh.org
+.br
+HelloD home page: <http://wbh.org/code>
+.SH COPYRIGHT
+Copyright \(co 2018 W.B.Hill <mail@wbh.org>
+.br
+License, dual. Either GPLv2 or BSD 2 clause, as appropriate.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
