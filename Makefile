@@ -88,10 +88,9 @@ distclean: clean
 
 # Generate an archive.
 zip:
-	zip -9 ${APPNAME}-${VERSION}.zip ${CODE} ${DOCS} ${MISC} &> /dev/null
+	zip -9 ${APPNAME}-${VERSION}.zip ${CODE} ${DOCS} ${MISC}&>/dev/null
 tar:
-	tar --transform "s#^#${APPNAME}-${VERSION}/#" -zcvf \
-		${APPNAME}-${VERSION}.tar.gz ${CODE} ${DOCS} ${MISC} &> /dev/null
+	tar --xform "s#^#${APPNAME}-${VERSION}/#" -zcvf ${APPNAME}-${VERSION}.tar.gz ${CODE} ${DOCS} ${MISC}&>/dev/null
 
 
 # vim:ts=2:sw=2:tw=114:fo=tcnq2b:foldmethod=indent
