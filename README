@@ -6,6 +6,7 @@ The file "main.c" handles the configuration files and command line options.
 The file "core.c" is the routines for the service. For this example the loop() just prints the date/time.
 "hellod.init.sh" is an old, initscripts, service script. By default, this is unused.
 "hellod.service" is a new, systemd, service file. This is used by default.
+"hellod.freebsd" is a FreeBSD startup script. Put it in /etc/rc.d and add to /etc/rc.conf: hellod_enable="YES"
 
 To use:
   make
@@ -17,6 +18,5 @@ To use:
 
 TODO
   Debian package, "make deb"
-  FreeBSD initscript.
   OpenWRT makefile.
   Test compatibility with pthreads.

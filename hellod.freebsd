@@ -1,0 +1,21 @@
+#!/bin/sh
+ 
+# PROVIDE: hellod
+ 
+. /etc/rc.subr
+ 
+name="hellod"
+rcvar=`set_rcvar`
+start_cmd="hellod_start"
+stop_cmd=":"
+ 
+load_rc_config $name
+ 
+hellod_start()
+{
+    if checkyesno ${rcvar}; then
+      /usr/local/sbin/hellod -D
+    fi
+}
+ 
+run_rc_command "$1"

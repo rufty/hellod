@@ -25,9 +25,11 @@ LFLAGS=-g
 LIBS=-lconfuse
 
 # The other bits.
-DOCS = README LICENSE ChangeLog ${APPNAME}.8
+DOCS = README LICENSE ChangeLog
 # And all the code.
 CODE = Makefile $(wildcard *.h) $(wildcard *.c)
+# Other bits.
+MISC = ${APPNAME}.8 ${APPNAME}.conf ${APPNAME}.conf.5 hellod.service hellod.init.sh hellod.freebsd
 
 # All the C source files.
 SOURCES = $(wildcard *.c)
@@ -86,9 +88,10 @@ distclean: clean
 
 # Generate an archive.
 zip:
-	zip -9 ${APPNAME}-${VERSION}.zip ${CODE} ${DOCS} &> /dev/null
+	zip -9 ${APPNAME}-${VERSION}.zip ${CODE} ${DOCS} ${MISC} &> /dev/null
 tar:
-	tar --transform "s#^#${APPNAME}-${VERSION}/#" -zcvf ${APPNAME}-${VERSION}.tar.gz ${CODE} ${DOCS} &> /dev/null
+	tar --transform "s#^#${APPNAME}-${VERSION}/#" -zcvf \
+		${APPNAME}-${VERSION}.tar.gz ${CODE} ${DOCS} ${MISC} &> /dev/null
 
 
 # vim:ts=2:sw=2:tw=114:fo=tcnq2b:foldmethod=indent
