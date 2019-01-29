@@ -29,7 +29,7 @@ DOCS = README LICENSE ChangeLog
 # And all the code.
 CODE = Makefile $(wildcard *.h) $(wildcard *.c)
 # Other bits.
-MISC = ${APPNAME}.8 ${APPNAME}.conf ${APPNAME}.conf.5 hellod.service hellod.init.sh hellod.freebsd
+MISC = ${APPNAME}.8 ${APPNAME}.conf ${APPNAME}.conf.5 ${APPNAME}.service ${APPNAME}.init.sh ${APPNAME}.freebsd
 
 # All the C source files.
 SOURCES = $(wildcard *.c)
