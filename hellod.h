@@ -2,9 +2,17 @@
 #define HELLOD_H
 
 
-#include <syslog.h>
+// Standard infractracture.
 #include <stdint.h>
 #include <stdbool.h>
+// Unix logging.
+#include <syslog.h>
+// For NAME_MAX, PATH_MAX
+#ifdef __linux__
+#include <linux/limits.h>
+#else
+#include <limits.h>
+#endif //__linux__
 
 
 // Configuration variables. ADDARG
@@ -19,9 +27,9 @@ extern struct Settings settings ;
 
 
 // What we're called.
-extern char dname[] ;
+extern char dname[NAME_MAX] ;
 // Where to put the PID file.
-extern char pidfile[] ;
+extern char pidfile[PATH_MAX] ;
 
 
 // Utility for redirecting messages.
@@ -40,4 +48,4 @@ void finish ( void ) ;
 #endif //HELLOD_H
 
 // VIM formatting info.
-// vim:ts=2:sw=2:tw=114:fo=tcnq2b:foldmethod=indent
+// vim:ts=2:sw=2:tw=120:fo=tcnq2b:foldmethod=indent

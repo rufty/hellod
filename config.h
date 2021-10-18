@@ -15,7 +15,7 @@
 #define VERBOSITY 9
 #define LOGMAX LOG_DEBUG
 #else
-#define VERBOSITY 1
+#define VERBOSITY 4
 #define LOGMAX LOG_NOTICE
 #endif //DEBUG
 
@@ -24,6 +24,5 @@
 
 
 #endif //CONFIG_H
-
 // VIM formatting info.
-// vim:ts=2:sw=2:tw=114:fo=tcnq2b:foldmethod=indent
+// vim:ts=2:sw=2:tw=120:fo=tcnq2b:foldmethod=indent

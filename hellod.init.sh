@@ -8,7 +8,7 @@
 # Default-Stop: 0 1 6
 # Short-Description: Example "hello world" service.
 # Description: Example "hello world" service.
-#              Simple "hello world" testbed service that executes a loop() at regular intervals
+#              Simple "hello world" testbed service that executes a loop() at regular intervals.
 ### END INIT INFO
 
 

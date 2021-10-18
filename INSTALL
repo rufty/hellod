@@ -1,0 +1,31 @@
+Only under Linux does "make install" add a systemd startup script, this will need to be added manually
+on other systems if restart after reboot is required. (Or manually use the included hellod.init.sh)
+
+
+Linux (with systemd)
+=====
+The basic install is:
+  make
+  sudo make install
+  sudo service hellod start
+  # Watch the pretty messages in /var/log/syslog
+  sudo service hellod stop
+  sudo make uninstall
+And if you want to make it start automatically at boot:
+  systemctl enable hellod
+
+
+MacOS
+=====
+I've only ever had this running as a normal user, compiled against MacPorts.
+
+
+FreeBSD
+=======
+FreeBSD requires gmake
+I wrote a startup script: hello.freebsd
+This used to get installed by:
+  cp hellod.freebsd /etc/rc.d/hellod
+and add to /etc/rc.conf:
+  hellod_enable="YES"
+When I tried this under FreeBSD 13, it no longer worked, so you're on your own!

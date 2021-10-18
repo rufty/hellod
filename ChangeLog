@@ -4,3 +4,4 @@
 0.3      Manpages and initscripts.
 0.4      Makefile tweaks for FreeBSD.
 1.0      Public release.
+1.1      Refactored to use settings framework from BaseApp.

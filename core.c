@@ -1,12 +1,11 @@
-// For PATH_MAX
-#if __linux
-#define _POSIX_SOURCE
-#endif //__linux
-
+// Standard infrastructure.
 #include <stdio.h>
-#include <limits.h>
 
+// Compile-time defults.
 #include "config.h"
+// The settings.
+#include "settings.h"
+// Globals.
 #include "hellod.h"
 
 
@@ -14,6 +13,7 @@
 void
 begin()
   {
+  syserr ( LOG_NOTICE, "%s : begin()", settings.message ) ;
   }
 
 
@@ -21,6 +21,7 @@ begin()
 void
 setup()
   {
+  syserr ( LOG_NOTICE, "%s : setup()", settings.message ) ;
   }
 
 
@@ -48,8 +49,9 @@ loop()
 void
 finish()
   {
+  syserr ( LOG_NOTICE, "%s : finish()", settings.message ) ;
   }
 
 
 // VIM formatting info.
-// vim:ts=2:sw=2:tw=114:fo=tcnq2b:foldmethod=indent
+// vim:ts=2:sw=2:tw=120:fo=tcnq2b:foldmethod=indent
